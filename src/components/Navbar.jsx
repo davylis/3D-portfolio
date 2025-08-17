@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { styles } from '../styles';
 import { navLinks } from '../constants'
 import { logo, menu, close } from '../assets'
+import { li } from 'framer-motion/client';
 
 
 const Navbar = () => {
@@ -22,8 +23,26 @@ const Navbar = () => {
                         window.scrollTo(0, 0)
                     }}
                     >
-                        <img src={logo} alt="logo" className="w-21 h-14 object-conatin"/>
+                        <img src={logo} alt="logo" className="w-21 h-14 object-contain"/>
+                        <p className='text-white text-[18px] font-bold cursor-pointer'> Liisa <span className='sm:block hidden'>| Web Developer</span> </p>
                     </Link>
+                    {/* tailwind utility class */}
+                    <ul className='list-none hidden sm:flex flex-row gap-10'>
+                        {navLinks.map((link) => (
+                            <li 
+                                key={link.id} 
+                                className={`${active===link.title
+                                ?"text-white"
+                                :"text-secondary"
+                            } hover:text-white text -[18px] font-medium cursor-pointer`}
+                            onClick={()=> setActive(link.title)}
+                            >
+                                <a href={`#${link.id}`}>{link.title}</a>
+                            </li>
+                            
+                        ))}
+                        
+                    </ul>
                 </div>
     </nav>
   )
