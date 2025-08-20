@@ -22,7 +22,6 @@ function App() {
         <Navbar/>
         <Hero/>
         </div>
-        <h1 className="text-red-500 text-3xl">Test</h1>
         <About/>
         <Experience/>
         <Tech/>
