@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import { styles } from '../styles';
+// import { motion } from 'framer-motion';
+// import { styles } from '../styles';
 
 
 const Hero2 = () => {
