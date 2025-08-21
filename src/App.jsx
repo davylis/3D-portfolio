@@ -7,6 +7,7 @@ import Tech from './components/Tech';
 import Works from './components/Works';
 import Feedbacks from './components/Feedbacks';
 import Contact from './components/Contact';
+import StarsCanvas from './components/Stars';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <div className="bg-hero-pattern bg-cover" >
         <Navbar/>
         <Hero/>
+        <StarsCanvas/>
         </div>
         <About/>
         <Experience/>

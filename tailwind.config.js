@@ -19,14 +19,14 @@ module.exports = {
       screens: {
         xs: "450px",
       },
-      backgroundImage: {
-        "hero-pattern": "url('/src/assets/olena-bohovyk-unsplash.jpg')",
-      },
-      backgroundPosition: {
-        "top-100": "center -100px",
-        "top-200": "center -200px",
-        "parallax": "center 20%", // custom name
-      },
+      // backgroundImage: {
+      //   "hero-pattern": "url('/src/assets/olena-bohovyk-unsplash.jpg')",
+      // },
+      // backgroundPosition: {
+      //   "top-100": "center -100px",
+      //   "top-200": "center -200px",
+      //   "parallax": "center 20%", // custom name
+      // },
     },
   },
   plugins: [],
