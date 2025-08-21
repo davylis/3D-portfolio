@@ -19,6 +19,9 @@ module.exports = {
       screens: {
         xs: "450px",
       },
+      animation: {
+        'spin-slow': 'spin 5s linear infinite',
+      },
       // backgroundImage: {
       //   "hero-pattern": "url('/src/assets/olena-bohovyk-unsplash.jpg')",
       // },

@@ -7,7 +7,7 @@ const Stars = (props) => {
   const ref = useRef();
   const [sphere] = useState(() => random.inSphere(new Float32Array(30000), { radius: 1.2 }));
 
-  const speed = 0.2;
+  const speed = 0.1;
   const zNear = -2;
   const zFar = 1;
    const depth = zFar - zNear;

@@ -17,6 +17,7 @@
     "maath": "^0.10.8",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-icons": "^5.5.0",
     "react-router-dom": "^7.8.0",
     "react-tilt": "^1.0.2",
     "react-vertical-timeline-component": "^3.5.3",
@@ -33,6 +34,7 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
     "postcss": "^8.5.6",
+    "react-devtools": "^3.6.3",
     "tailwindcss": "^3.4.17",
     "vite": "^7.1.2"
   }
