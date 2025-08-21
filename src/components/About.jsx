@@ -14,7 +14,7 @@ const About = () => {
                 <img className="logo-center mix-blend-difference opacity-70 object-contain" src={logo} alt="3D"/>
                 <div className="FrontEnd">
                     <h1 className="gradient">FrontEnd <FaCode /></h1>
-                    <p>I have expertise in HTML, CSS, JavaScript, and design tools like Figma and Adobe XD. My strength lies in blending aesthetics with functionality to create seamless user experiences.</p>    
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>    
                 </div>
                 
                 <div className="BackEnd">
@@ -23,7 +23,7 @@ const About = () => {
 
       </svg>
       <FaServer /></h1>
-                    <p>I’m skilled in HTML, CSS, JavaScript, and frameworks like React and Node.js. I also have experience with database management using MongoDB and MySQL.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat</p>
                 </div>
 
                 <div className="slider" reverse="true"
