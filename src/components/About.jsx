@@ -1,16 +1,15 @@
 import React from "react";
 import { logo } from "../assets";
 import { FaServer } from "react-icons/fa";
-import { styles } from "../styles";
 import { FaCode } from "react-icons/fa";
-import Model1Canvas from "./canvas/Model1";
+import Model1 from "./canvas/Model1";
 
 const About = () => {
   return (
     <section className="skills-section">
       <h1 className="section-title autoDisplay">My Skills 💪</h1>
       <div className="skills-box autoDisplay">
-        <Model1Canvas />
+        <Model1 />
         <img
           className="logo-center mix-blend-difference opacity-70 object-contain"
           src={logo}
