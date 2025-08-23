@@ -8,13 +8,8 @@ const About = () => {
   return (
     <section className="skills-section">
       <h1 className="section-title autoDisplay">My Skills 💪</h1>
-      <div className="skills-box autoDisplay">
-        <Model1 />
-        <img
-          className="logo-center mix-blend-difference opacity-70 object-contain"
-          src={logo}
-          alt="3D"
-        />
+      <div className="skills-box autoDisplay min-h-[500px]">
+        <Model1/>
         <div className="FrontEnd">
           <h1 className="gradient">
             FrontEnd <FaCode />

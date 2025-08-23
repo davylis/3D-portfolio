@@ -7,19 +7,22 @@ import {
   Preload,
   useGLTF
 } from "@react-three/drei";
+import { Center } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 
 const Model1 = () => {
-  const model = useGLTF('/pearl_electron/scene.gltf');
+  const model = useGLTF('/rhetorician/scene.gltf');
    return (
-    <Canvas frameloop="demand" camera={{ position: [-4, 3, 6], fov: 45, near: 0.1, far: 200 }}>
-      <ambientLight intensity={0.5} />
-      <directionalLight position={[5, 5, 5]} />
+    <Canvas frameloop="demand" camera={{ position: [-6, 7, 10], fov: 45, near: 0.9, far: 200 }}>
+      <ambientLight intensity={1.5} />
+      <directionalLight position={[100, 100, 100]} />
        <Suspense fallback={<CanvasLoader />}>
-        <primitive object={model.scene} scale={1} position={[0, 0, 0]} />
+       <Center>
+        <primitive object={model.scene} scale={1.9} />
+        </Center>
          </Suspense>
-         <OrbitControls enableZoom={true} />
+         <OrbitControls enableZoom={false} />
       <Preload all /> 
     </Canvas>
 
