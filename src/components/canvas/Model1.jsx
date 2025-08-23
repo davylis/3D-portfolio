@@ -22,7 +22,7 @@ const Model1 = () => {
         <primitive object={model.scene} scale={1.9} />
         </Center>
          </Suspense>
-         <OrbitControls enableZoom={false} />
+         <OrbitControls enableZoom={false} enablePan={false}/>
       <Preload all /> 
     </Canvas>
 
