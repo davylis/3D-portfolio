@@ -19,7 +19,7 @@ const Model1 = () => {
       <directionalLight position={[100, 100, 100]} />
        <Suspense fallback={<CanvasLoader />}>
        <Center>
-        <primitive object={model.scene} scale={1.9} />
+        <primitive object={model.scene} scale={1.5} />
         </Center>
          </Suspense>
          <OrbitControls enableZoom={false} enablePan={false}/>

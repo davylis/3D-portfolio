@@ -4,6 +4,7 @@ import { FaServer } from "react-icons/fa";
 import { FaCode } from "react-icons/fa";
 import { BiCodeAlt } from "react-icons/bi";
 import Model1 from "./canvas/Model1";
+import { css, aws, c, docker, git, html, java, js, linux, mysql, postman, python, react, tailwind } from "../assets/tech";
 
 const About = () => {
   return (
@@ -11,7 +12,7 @@ const About = () => {
       <h1 className="section-title autoDisplay">My Skills 💪</h1>
      
 
-      <div className="skills-box autoDisplay min-h-[500px]">
+      <div className="skills-box autoDisplay">
         <Model1/>
         <div className="FrontEnd">
           <h1 className="gradient">
@@ -104,41 +105,53 @@ const About = () => {
         </div>
 
         <div
-          className="slider"
+          className="slider" 
           reverse="true"
           style={{
             "--width": "100px",
             "--height": "100px",
-            "--quantity": 9,
+            "--quantity": 13,
           }}
         >
           <div className="list">
             <div className="item" style={{ "--position": 1 }}>
-              <img src="images/1.png" alt="" />
+              <img src={html} alt="" />
             </div>
             <div className="item" style={{ "--position": 2 }}>
-              <img src="images/2.png" alt="" />
+              <img  src={css} alt="" />
             </div>
             <div className="item" style={{ "--position": 3 }}>
-              <img src="images/3.webp" alt="" />
+              <img  src={git} alt="" />
             </div>
             <div className="item" style={{ "--position": 4 }}>
-              <img src="images/4.webp" alt="" />
+              <img  src={aws} alt="" />
             </div>
             <div className="item" style={{ "--position": 5 }}>
-              <img src="images/5.png" alt="" />
+              <img  src={java} alt="" />
             </div>
             <div className="item" style={{ "--position": 6 }}>
-              <img src="images/6.png" alt="" />
+              <img  src={c} alt="" />
             </div>
             <div className="item" style={{ "--position": 7 }}>
-              <img src="images/7.png" alt="" />
+              <img  src={js} alt="" />
             </div>
             <div className="item" style={{ "--position": 8 }}>
-              <img src="images/8.png" alt="" />
+              <img  src={linux} alt="" />
             </div>
             <div className="item" style={{ "--position": 9 }}>
-              <img src="images/9.png" alt="" />
+              <img  src={mysql} alt="" />
+            </div>
+            <div className="item" style={{ "--position": 10 }}>
+              <img  src={postman} alt="" />
+            </div>
+            <div className="item" style={{ "--position": 11 }}>
+              <img  src={python} alt="" />
+            </div>
+            <div className="item" style={{ "--position": 12 }}>
+              <img  src={react} alt="" />
+            </div>
+            <div className="item" style={{ "--position": 13 }}>
+              <img  src={tailwind} alt="" />
             </div>
           </div>
         </div>
