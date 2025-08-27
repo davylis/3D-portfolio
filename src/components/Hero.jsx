@@ -1,7 +1,7 @@
 // import { useEffect, useState } from "react";
 // import { motion } from 'framer-motion';
 // import { styles } from '../styles';
-//  import StarryNight from './canvas/Model1'
+//  import StarryNight from './canvas/SocratesModel'
 
 
 const Hero = () => {

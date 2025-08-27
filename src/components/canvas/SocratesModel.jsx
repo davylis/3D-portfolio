@@ -11,7 +11,7 @@ import { Center } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 
-const Model1 = () => {
+const SocratesModel = () => {
   const model = useGLTF('/rhetorician/scene.gltf');
    return (
     <Canvas frameloop="demand" camera={{ position: [-6, 7, 10], fov: 45, near: 0.9, far: 200 }}>
@@ -32,4 +32,4 @@ const Model1 = () => {
 
 
 
-export default Model1;
+export default SocratesModel;

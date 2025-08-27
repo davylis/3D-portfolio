@@ -1,18 +1,12 @@
-import React from "react";
-import { FaServer } from "react-icons/fa";
-import { FaCode } from "react-icons/fa";
-import { BiCodeAlt } from "react-icons/bi";
-import Model1 from "./canvas/Model1";
+import SocratesModel from "./canvas/SocratesModel";
 import { css, aws, c, git, html, java, js, linux, mysql, postman, python, react, tailwind } from "../assets/tech";
 
 const About = () => {
   return (
     <section className="skills-section">
       <h1 className="section-title autoDisplay">My Skills 💪</h1>
-
-
       <div className="skills-box autoDisplay">
-        <Model1 />
+        <SocratesModel />
         <div className="FrontEnd">
           <h1 className="gradient">
             FrontEnd
