@@ -208,7 +208,8 @@
     align-items: center;
     position: relative;
     z-index: 10;
-}
+    opacity: 0.9;
+  }
 .logo-center{
   width: 250px;
   height: 250px;
@@ -222,7 +223,9 @@
   align-items: start;
   justify-content: center;
   mix-blend-mode: lighten;
-  opacity: 0.7;
+}
+.skills-model{
+  opacity: 0.8;
 }
 .FrontEnd{
   position: absolute;
