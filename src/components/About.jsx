@@ -3,6 +3,7 @@ import SocratesModel from "./canvas/SocratesModel";
 import { motion } from "motion/react"
 import { textVariant } from '../utils/motion';
 import { css, aws, c, git, html, java, js, linux, mysql, postman, python, react, tailwind } from "../assets/tech";
+import  SectionWrapper  from '../hoc/SectionWrapper'
 
 // Main Component
 const About = () => {
@@ -166,4 +167,4 @@ const CodeSvg = () => {
   )
 }
 
-export default About;
+export default SectionWrapper (About, "about");

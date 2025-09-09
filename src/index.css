@@ -458,4 +458,36 @@
     z-index: 999;
     padding: 0 3rem;
 }
+.contact-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5rem;
+    }
+    .section-title {
+      margin-top: 5px;
+      text-align: center;
+    }
+.social-box {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 
+}
+.social-box a{
+    color: lightgray;
+    text-decoration: none;
+    font-size: 20px;
+    text-wrap: nowrap;
+}
+
+.social-box i{
+    color: #7668ff;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.social-icons a i{
+    color: white;
+    margin-top: 40px;
+}

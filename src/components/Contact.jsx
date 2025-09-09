@@ -1,79 +1,86 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
+import { motion } from "motion/react"
+import { textVariant } from '../utils/motion';
+import { styles } from '../styles';
+import emailjs from '@emailjs/browser';
+import  SectionWrapper  from '../hoc/SectionWrapper'
 
 const Contact = () => {
+  const formRef = useRef();
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+  };
+
   return (
     <>
-      <section className="contact-section">
-        <h1 className="section-title autoDisplay">Let's talk 😊</h1>
-
-        <div className="social-box autoBlur">
-          <a href="tel:+39111222444">
-            <i className="bx bxs-phone"></i> +39 111 222 444
-          </a>
-          <a href="https://t.me/example" target="_blank" rel="noopener noreferrer">
-            <i className="bx bxl-telegram"></i> Contact Example.com
-          </a>
-          <a
-            href="https://www.linkedin.com/in/example"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="bx bxl-linkedin-square"></i> Contact Example.com
-          </a>
-
-          <div className="social-icons">
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <i className="bx bxl-youtube"></i>
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <i className="bx bxl-twitter"></i>
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <i className="bx bxl-facebook-circle"></i>
-            </a>
+        <motion.div variants={textVariant()}>
+           <div className="xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden">
+          <h2 className={`${styles.sectionHeadText} section-title text-center`}>
+            Contact
+          </h2>
           </div>
-        </div>
+          <div className="xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden">
+          <form ref={formRef}
+          onSubmit={handleSubmit}
+          className='mt-12 flex flex-col gap-8'
+          >
+            <label className="flex flex-col">
+              <span className='text-white font-medium mb-4'>Your Name</span>
+              <input 
+              type="text"
+              name="name"
+               value={form.name}
+              onChange={handleChange}
+              placeholder="What's your good name?"
+              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+               />
+            </label>
+            <label className="flex flex-col">
+              <span className='text-white font-medium mb-4'>Your Email</span>
+              <input 
+              type="text"
+              name="email"
+               value={form.email}
+              onChange={handleChange}
+              placeholder="What's your good email?"
+              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+               />
+            </label>
+            <label className="flex flex-col">
+              <span className='text-white font-medium mb-4'>Your Message</span>
+              <textarea 
+              name="message"
+               value={form.message}
+              onChange={handleChange}
+              placeholder="What do you want to say?"
+              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+               />
+            </label>
+            <button
+            type="submit"
+            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
+            >
+              {loading ? 'Sending...' : 'Send'}
 
-        <div className="contact-box autoBlur">
-          <p>
-            Whether you're looking to build a new website, improve your existing
-            platform, or bring a unique project to life, I'm here to help.
-          </p>
-
-          <label>Full Name</label>
-          <input placeholder="Your Full name" type="text" />
-
-          <label>Email Address</label>
-          <input placeholder="Your Email" type="email" />
-
-          <label>Your Message</label>
-          <textarea
-            className="input-message"
-            placeholder="Share your thoughts..."
-          />
-
-          <button>
-            Send Message <i className="bx bx-mail-send"></i>
-          </button>
-        </div>
-      </section>
-
-      <footer className="footer">
-        <h1>©️2025</h1>
-        <div className="box-icons">
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <i className="bx bxl-youtube"></i>
-          </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <i className="bx bxl-github"></i>
-          </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <i className="bx bxl-linkedin-square"></i>
-          </a>
-        </div>
-      </footer>
+            </button>
+          </form>
+          </div>
+        </motion.div>
     </>
   );
 };
 
-export default Contact;
+export default SectionWrapper (Contact, "contact");
