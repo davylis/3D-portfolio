@@ -33,12 +33,16 @@ reprehenderit in voluptate velit esse cillum dolore eu fugiat.`;
   ];
 
   return (
-    <section className="skills-section">
-
+    
+<>
       <h2 className={`${styles.sectionHeadText}`}>My Skills</h2>
 
       
-      <motion.div className="skills-box autoDisplay" variants={textVariant()} initial="hidden" whileInView="show"
+      <motion.div 
+      className="skills-box flex flex-col lg:flex-row items-center justify-between gap-8 w-full"
+      variants={textVariant()} 
+      initial="hidden" 
+      whileInView="show"
   viewport={{ once: true, amount: 0.25 }}>
         <SocratesModel />
         <SkillTextArea
@@ -71,7 +75,7 @@ reprehenderit in voluptate velit esse cillum dolore eu fugiat.`;
           </div>
         </div>
       </motion.div>
-    </section>
+   </>
   );
 };
 
