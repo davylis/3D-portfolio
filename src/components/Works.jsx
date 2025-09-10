@@ -28,7 +28,7 @@ const ProjectCard = ({
         className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
       >
         <div className="project-card">
-           <div class="hover-sign"></div>
+           <div className="hover-sign"></div>
           <img
             src={image}
             alt='project_image'

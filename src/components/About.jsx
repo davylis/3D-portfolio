@@ -4,6 +4,7 @@ import { motion } from "motion/react"
 import { textVariant } from '../utils/motion';
 import { css, aws, c, git, html, java, js, linux, mysql, postman, python, react, tailwind } from "../assets/tech";
 import  SectionWrapper  from '../hoc/SectionWrapper'
+import { styles } from "../styles";
 
 // Main Component
 const About = () => {
@@ -33,7 +34,10 @@ reprehenderit in voluptate velit esse cillum dolore eu fugiat.`;
 
   return (
     <section className="skills-section">
-      <h1 className="section-title autoDisplay">My Skills 💪</h1>
+
+      <h2 className={`${styles.sectionHeadText}`}>My Skills</h2>
+
+      
       <motion.div className="skills-box autoDisplay" variants={textVariant()} initial="hidden" whileInView="show"
   viewport={{ once: true, amount: 0.25 }}>
         <SocratesModel />
