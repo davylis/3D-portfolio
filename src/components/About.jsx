@@ -51,8 +51,10 @@ Docker for containerization to deploy and run applications in isolated environme
   return (
     
 <>
-      <h2 className={`${styles.sectionHeadText}`}>My Skills</h2>
+      <h2 className={`${styles.sectionHeadText} gradient text-center`} style={{ marginBottom: '60px' }}>My Skills</h2>
 
+      <p className={`${styles.sectionSubText} text-center`} >
+                Move me!</p>
       
       <motion.div 
       className="skills-box flex flex-col lg:flex-row items-center justify-between gap-8 w-full"
