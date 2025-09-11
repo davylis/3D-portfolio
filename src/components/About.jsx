@@ -51,48 +51,47 @@ Docker for containerization to deploy and run applications in isolated environme
   return (
     
 <>
-      <h2 className={`${styles.sectionHeadText} gradient text-center`} style={{ marginBottom: '60px' }}>My Skills</h2>
-
-      <p className={`${styles.sectionSubText} text-center`} >
-                Move me!</p>
-      
-      <motion.div 
-      className="skills-box flex flex-col lg:flex-row items-center justify-between gap-8 w-full"
-      variants={textVariant()} 
-      initial="hidden" 
+    <h2
+  className={`${styles.sectionHeadText} gradient text-center`}
+  style={{ marginBottom: '60px' }}
+>
+  My Skills
+</h2>
+  
+<motion.div
+      className="flex flex-col lg:flex-row items-center justify-between gap-10 w-full"
+      variants={textVariant()}
+      initial="hidden"
       whileInView="show"
-  viewport={{ once: true, amount: 0.25 }}>
-        <SocratesModel />
+      viewport={{ once: true, amount: 0.25 }}
+    >
+      {/* Frontend */}
+      <div className="xl:flex-1 md:h-[1000px] h-[650px] flex flex-col items-center justify-center">
         <SkillTextArea
           title="Frontend"
           icon={<CodeSvg />}
           body={templateText1}
-          skillAreaClassName='FrontEnd'
+          skillAreaClassName="FrontEnd"
         />
+      </div>
+
+      {/* 3D Model */}
+      <div className="xl:flex-1 md:h-[1000px] h-[650px] flex flex-col items-center justify-center">
+        <SocratesModel />
+      </div>
+
+      {/* Backend */}
+      <div className="xl:flex-1 md:h-[1000px] h-[650px] flex flex-col items-center justify-center">
         <SkillTextArea
           title="Backend"
           icon={<ServerSvg />}
           body={templateText2}
-          skillAreaClassName='BackEnd'
+          skillAreaClassName="BackEnd"
         />
-        <div
-          className="slider"
-          reverse="true"
-          style={{
-            "--width": "100px",
-            "--height": "100px",
-            "--quantity": 13,
-          }}
-        >
-          <div className="list">
-            {skills.map((skill) => (
-              <div className="item" key={skill.position} style={{ "--position": skill.position }}>
-                <img src={skill.src} alt="" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </motion.div>
+      </div>
+    </motion.div>
+
+
    </>
   );
 };

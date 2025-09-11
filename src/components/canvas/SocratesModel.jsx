@@ -16,7 +16,7 @@ const SocratesModel = () => {
   const model = useGLTF('/rhetorician/scene.gltf');
   return (
     <>
-      <Canvas frameloop="demand" camera={{ position: [-6, 7, 10], fov: 45, near: 0.9, far: 200 }}>
+      <Canvas frameloop="demand" camera={{ position: [-6, 7, 10], fov: 45, near: 0.9, far: 100 }}>
         <ambientLight intensity={1.5} />
         <directionalLight position={[100, 100, 100]} />
         <Suspense fallback={<CanvasLoader />}>
