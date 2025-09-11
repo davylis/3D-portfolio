@@ -9,11 +9,27 @@ import { styles } from "../styles";
 // Main Component
 const About = () => {
   // text body for skills text area
-  const templateText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-aliquip ex ea commodo consequat. Duis aute irure dolor in
-reprehenderit in voluptate velit esse cillum dolore eu fugiat.`;
+  const templateText1 = `I see the important role of Frontend development in shaping user experiences and 
+  creating visually appealing interfaces. After all, these services are meant for people to use.
+  Crafting a standout website leaves a lasting impression on users and helps keep them engaged 
+  so they can fully take in what is the message of the website. I mostly use the React framework and code with HTML 
+  and JavaScript to build websites. For styling, I work with CSS and am honing my skills further
+  with TailwindCSS to make things look modern and responsive. I pay attention to responsive design, so sites work 
+  well on all devices and of providing descriptive text for images to make website accessible to people with disabilities. 
+  I also use Git for version control to control changes, experiment and collaborate with others. I use Linux(Zorin) too, which
+  lets me really take full control of my computer.`;
+
+const templateText2 = `With Backend building, I design, build, and maintain the server-side parts of web applications. 
+I use Spring Boot as a framework for server-side scripting and managing
+the server environment and I mostly code in Java, with some Python as well. I am familiar with database 
+systems and query languages  and I can work with relational databases(like MySQL) as well as non-relational
+databases(like MongoDB) to manage data effectively. I write APIs that let the frontend and backend communicate 
+smoothly, making data exchange easy. I am also very interesten in cybersecurity, icluding various methods of
+securing data applications, network security, encryption, identity and access management(IAM) and risk management. 
+By using middleware effectively, I can make applications more secure and improve overall performance. When 
+it comes to cloud platforms, I have experience with AWS, though nowadays we run our own home server. I manage 
+dependencies, building, and packaging Java/Spring Boot applications with Gradle and Maven. Additionally, I use 
+Docker for containerization to deploy and run applications in isolated environments. )`;
 
   // Array of skills icons and their positions
   const skills = [
@@ -48,13 +64,13 @@ reprehenderit in voluptate velit esse cillum dolore eu fugiat.`;
         <SkillTextArea
           title="Frontend"
           icon={<CodeSvg />}
-          body={templateText}
+          body={templateText1}
           skillAreaClassName='FrontEnd'
         />
         <SkillTextArea
           title="Backend"
           icon={<ServerSvg />}
-          body={templateText}
+          body={templateText2}
           skillAreaClassName='BackEnd'
         />
         <div
@@ -83,19 +99,16 @@ reprehenderit in voluptate velit esse cillum dolore eu fugiat.`;
 const SkillTextArea = (props) => {
   const { title, icon, body, skillAreaClassName } = props;
   return (
-    <>
-      <div className={skillAreaClassName}>
-        <h1 className="gradient">
-          {title}
-          {icon}
-        </h1>
-        <p>
-          {body}
-        </p>
+    <div className={skillAreaClassName}>
+      <div className="title-container">
+        <h1 className="gradient">{title}</h1>
+        <div className="icon">{icon}</div>
       </div>
-    </>
+      <p>{body}</p>
+    </div>
   )
 }
+
 
 const ServerSvg = () => {
   return (
