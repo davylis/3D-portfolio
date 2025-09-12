@@ -6,11 +6,17 @@ import Experience from './components/Experience';
 import Works from './components/Works';
 import Contact from './components/Contact';
 import StarsCanvas from './components/Stars';
+import Preloader from './components/Preloader';
+import { d_logo } from './assets'
 
 function App() {
 
   return (
     <>
+    <Preloader
+      element={<img src={d_logo} alt="Preloader Logo" style={{borderRadius: '50px'}}/>}
+      seconds={3}
+    />
     <BrowserRouter>
       <div className="relative z-0 bg-primary min-h-screen" >
         <div className="bg-hero-pattern bg-cover bg-center" >
@@ -19,7 +25,6 @@ function App() {
         <StarsCanvas/>
         </div>
         <About/>
-        
         <Experience/>
         <Works/>
         <div className="relative z-0">

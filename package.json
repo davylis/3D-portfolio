@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
+    "serve": "serve -s dist -l 5677",
     "lint": "eslint .",
     "preview": "vite preview"
   },
