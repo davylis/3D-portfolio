@@ -492,3 +492,12 @@
     color: white;
     margin-top: 40px;
 }
+
+video {
+  position: relative; /* or absolute */
+  z-index: 10; /* Ensure it's above other elements */
+  display: block; /* Ensure it is displayed */
+  width: 100%; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
