@@ -13,29 +13,24 @@ function App() {
 
   return (
     <>
-    <Preloader
-      element={<img src={d_logo} alt="Preloader Logo" style={{borderRadius: '50px'}}/>}
-      seconds={3}
-
-      
-    />
-
- 
-    <BrowserRouter>
-      <div className="relative z-0 bg-primary min-h-screen" >
-        <div className="bg-hero-pattern bg-cover bg-center" >
-        <Navbar/>
-        <Hero/>
+      <Preloader
+        element={<img src={d_logo} alt="Preloader Logo" style={{ borderRadius: '50px' }} />}
+        seconds={3}
+      />
+      <BrowserRouter>
+        <div className="z-0 min-h-screen" >
+          <div className="bg-hero-pattern bg-cover bg-center" >
+            <Navbar />
+            <Hero />
+          </div>
+          <div className="relative z-0 w-screen bg-primary bg-center min-h-screen">
+            <StarsCanvas />
+            <About />
+            <Experience />
+            <Works />
+            <Contact />
+          </div>
         </div>
-        <div className="relative z-0 bg-primary min-h-screen">
-          <StarsCanvas />
-        <About/>
-        <Experience/>
-        <Works/>
-        <Contact/>
-
-        </div>
-      </div>
       </BrowserRouter>
     </>
   )
