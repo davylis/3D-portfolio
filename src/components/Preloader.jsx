@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const Preloader = (props) => {
     const { element, seconds } = props;
-    const milliseconds = seconds * 1000
+    const milliseconds = seconds * 200
     const [isVisible, setIsVisible] = useState(true);
 
     useEffect(() => {
