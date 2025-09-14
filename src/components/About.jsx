@@ -2,8 +2,8 @@ import SocratesModel from "./canvas/SocratesModel";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "motion/react"
 import { textVariant } from '../utils/motion';
-import { css, aws, c, git, html, java, js, linux, mysql, postman, python, react, tailwind } from "../assets/tech";
-import  SectionWrapper  from '../hoc/SectionWrapper'
+import { nodejs, spring, sqlite, css, aws, c, git, html, java, js, linux, mysql, postman, python, react, tailwind } from "../assets/tech";
+import SectionWrapper from '../hoc/SectionWrapper'
 import { styles } from "../styles";
 
 // Main Component
@@ -19,7 +19,7 @@ const About = () => {
   I also use Git for version control to control changes, experiment and collaborate with others. I use Linux(Zorin) too, which
   lets me really take full control of my computer.`;
 
-const templateText2 = `With Backend building, I design, build, and maintain the server-side parts of web applications. 
+  const templateText2 = `With Backend building, I design, build, and maintain the server-side parts of web applications. 
 I use Spring Boot as a framework for server-side scripting and managing
 the server environment and I mostly code in Java, with some Python as well. I am familiar with database 
 systems and query languages  and I can work with relational databases(like MySQL) as well as non-relational
@@ -46,53 +46,72 @@ Docker for containerization to deploy and run applications in isolated environme
     { src: python, position: 11 },
     { src: react, position: 12 },
     { src: tailwind, position: 13 },
+    { src: nodejs, position: 14 },
+    { src: sqlite, position: 15 },
+    { src: spring, position: 16 },
   ];
 
   return (
-    
-<>
-    <h2
-  className={`${styles.sectionHeadText} gradient text-center`}
-  style={{ marginBottom: '60px' }}
->
-  My Skills
-</h2>
-  
-<motion.div
-      className="flex flex-col lg:flex-row items-center justify-between gap-10 w-full"
-      variants={textVariant()}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, amount: 0.25 }}
-    >
-      {/* Frontend */}
-      <div className="xl:flex-1 md:h-[1000px] h-[650px] flex flex-col items-center justify-center">
-        <SkillTextArea
-          title="Frontend"
-          icon={<CodeSvg />}
-          body={templateText1}
-          skillAreaClassName="FrontEnd"
-        />
-      </div>
 
-      {/* 3D Model */}
-      <div className="xl:flex-1 md:h-[1000px] h-[650px] flex flex-col items-center justify-center">
-        <SocratesModel />
-      </div>
+    <>
+      <h2
+        className={`${styles.sectionHeadText} gradient text-center`}
+        style={{ marginBottom: '60px', marginTop: '200px'}}
+      >
+        My Skills
+      </h2>
 
-      {/* Backend */}
-      <div className="xl:flex-1 md:h-[1000px] h-[650px] flex flex-col items-center justify-center">
-        <SkillTextArea
-          title="Backend"
-          icon={<ServerSvg />}
-          body={templateText2}
-          skillAreaClassName="BackEnd"
-        />
-      </div>
-    </motion.div>
+      <motion.div
+        className="flex flex-col lg:flex-row items-center justify-between gap-10 w-full"
+        variants={textVariant()}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.25 }}
+      >
+        {/* Frontend */}
+        <div className="xl:flex-1 md:h-[1000px] h-[650px] flex flex-col items-center justify-center">
+          <SkillTextArea
+            title="Frontend"
+            icon={<CodeSvg />}
+            body={templateText1}
+            skillAreaClassName="FrontEnd"
+          />
+        </div>
 
+        {/* 3D Model */}
+        <div className="xl:flex-1 md:h-[1000px] h-[650px] flex flex-col items-center justify-center">
+          <p className={styles.sectionSubText}>Move me!</p>
+          <SocratesModel />
+        </div>
 
-   </>
+        {/* Backend */}
+        <div className="xl:flex-1 md:h-[1000px] h-[650px] flex flex-col items-center justify-center">
+          <SkillTextArea
+            title="Backend"
+            icon={<ServerSvg />}
+            body={templateText2}
+            skillAreaClassName="BackEnd"
+          />
+        </div>
+        <div
+          className="slider"
+          reverse="true"
+          style={{
+            "--width": "100px",
+            "--height": "100px",
+            "--quantity": 16,
+          }}
+        >
+          <div className="list">
+            {skills.map((skill) => (
+              <div className="item" key={skill.position} style={{ "--position": skill.position }}>
+                <img src={skill.src} alt="" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+    </>
   );
 };
 
@@ -189,4 +208,4 @@ const CodeSvg = () => {
   )
 }
 
-export default SectionWrapper (About, "about");
+export default SectionWrapper(About, "about");

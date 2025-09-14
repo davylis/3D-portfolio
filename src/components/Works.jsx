@@ -99,5 +99,5 @@ const Works = () => {
   );
 };
 
-const WrappedWorks = SectionWrapper(Works, "");
+const WrappedWorks = SectionWrapper(Works, "projects");
 export default WrappedWorks;

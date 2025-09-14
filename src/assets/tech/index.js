@@ -12,6 +12,9 @@ import postman from './postman.png'
 import python from './python.png'
 import react from './react.png'
 import tailwind from './tailwind.png'
+import sqlite from './sqlite.png'
+import spring from './spring.png'
+import nodejs from './nodejs.png'
 
 export {
   aws,
@@ -27,5 +30,9 @@ export {
   postman,
   python,
   react,
-  tailwind
+  tailwind, 
+  spring,
+  sqlite, 
+  nodejs, 
+
 };

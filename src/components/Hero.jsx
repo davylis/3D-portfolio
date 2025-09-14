@@ -30,17 +30,24 @@ const Hero = () => {
 
   const Video = ({ type = 'video/mp4' }) => (
      <div className="relative w-full h-screen">
-      <video
-      className="fixed top-0 left-0 w-full h-full object-cover z-0"
-      autoPlay
-      loop
-      muted
-      playsInline
-    >
+     <video
+  className="
+    fixed top-0 left-0 
+    w-full h-full 
+    object-cover 
+    z-0 
+    md:w-full md:h-full 
+    sm:w-auto sm:h-full
+  "
+  autoPlay
+  loop
+  muted
+  playsInline
+>
+  <source src={videoSrc} type={type} />
+  Your browser does not support the video tag.
+</video>
 
-      <source src={videoSrc} type={type} />
-      Your browser does not support the video tag.
-    </video>
         {/* <div className="absolute bottom-20 left-20 z-10">
         <h1 className={`${styles.sectionSubText}  text-2xl md:text-xl`}>Let me help you with technical solutions</h1>
       </div> */}
