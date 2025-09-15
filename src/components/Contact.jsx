@@ -28,24 +28,25 @@ const Contact = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <div className="xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden">
-          <h2 className={`${styles.sectionHeadText} section-title text-center`}>
+        <div className="xl:mt-12">
+          <h2 className={`${styles.sectionHeadText} section-title text-center gradient`}
+          style={{ marginBottom: '60px', marginTop: '100px'}}>
             Contact
           </h2>
         </div>
 
-        <div className="xl:mt-12 flex xl:flex-row flex-col gap-10 overflow-hidden">
+        <div className="xl:mt-12 flex xl:flex-row flex-col gap-6">
 <motion.div 
         variants={textVariant()} 
-        className='xl:flex-1 md:h-[550] md:h-[550px] h-[150px]' 
+        className="flex w-full xl:w-1/2 items-center justify-center"
       > 
-       <p className={styles.sectionSubText}>Move me!</p>
+       <p className={styles.sectionSubText} text-center mb-4>Move me!</p>
       <BluePlanet /> 
       </motion.div>
-       
+       <div className="flex w-full xl:w-1/2 items-center justify-center">
           <form ref={formRef}
             onSubmit={handleSubmit}
-            className='mt-12 flex flex-col gap-8'
+            className="flex-1 flex flex-col gap-8 max-w-lg w-full"
           >
             <label className="flex flex-col">
               <span className='text-white font-medium mb-4'>Your Name</span>
@@ -87,6 +88,7 @@ const Contact = () => {
 
             </button>
           </form>
+          </div>
         </div>
       </motion.div>
 
