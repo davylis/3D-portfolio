@@ -105,7 +105,7 @@ const experiences = [
     title: "Dance Teacher",
     company_name: "SyVo ry",
     icon: sysma,
-    iconBg: "#b33ab1ff",
+    iconBg: "#BE1B82",
     date: "August 2025 - Present",
     points: [
       "Teaching commercial dance classes.",
@@ -144,7 +144,7 @@ const experiences = [
     title: "Fitness and Dance Instructor",
     company_name: "Fitness24Seven",
     icon: fit,
-    iconBg: "#091269ff",
+    iconBg: "#1a2376ff",
     date: "April 2021 - March 2022",
     points: [
       "Taught group fitness and dance classes for different age groups",
@@ -155,7 +155,7 @@ const experiences = [
     title: "Graphic Designer",
     company_name: "NP Center of Contemporary Literature",
     icon: GD,
-    iconBg: "#678cfbff",
+    iconBg: "#3764ebff",
     date: "January 2020 - June 2020",
     points: [
       "Designed book cover and visual concept for publishing project.",

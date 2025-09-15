@@ -69,7 +69,7 @@ Docker for containerization to deploy and run applications in isolated environme
         viewport={{ once: true, amount: 0.25 }}
       >
         {/* Frontend */}
-        <div className="xl:flex-1 md:h-[1000px] h-[650px] flex flex-col items-center justify-center">
+        <div className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'>
           <SkillTextArea
             title="Frontend"
             icon={<CodeSvg />}
@@ -85,7 +85,7 @@ Docker for containerization to deploy and run applications in isolated environme
         </div>
 
         {/* Backend */}
-        <div className="xl:flex-1 md:h-[1000px] h-[650px] flex flex-col items-center justify-center">
+        <div className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'>
           <SkillTextArea
             title="Backend"
             icon={<ServerSvg />}

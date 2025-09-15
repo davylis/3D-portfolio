@@ -51,7 +51,7 @@ const Experience = () => {
      <motion.div variants={textVariant()} >
        
         <h2 className={`${styles.sectionHeadText} text-center gradient`}
-         style={{ marginBottom: '60px', marginTop: '200px'}}>
+         style={{ marginBottom: '60px', marginTop: '100px'}}>
           Work Experience
         </h2>
       </motion.div>
