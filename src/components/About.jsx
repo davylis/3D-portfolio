@@ -62,14 +62,14 @@ Docker for containerization to deploy and run applications in isolated environme
       </h2>
 
       <motion.div
-        className="flex flex-col lg:flex-row items-center justify-between w-full max-w-[1200px] mx-auto overflow-x-hidden overflow-y-hidden"
+        className="flex flex-col lg:flex-row items-center justify-between w-full max-w-[1200px] mx-auto overflow-x-hidden overflow-y-hidden "
         variants={textVariant()}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
       >
         {/* Frontend */}
-        <div className="w-full lg:w-1/4">
+        <div className="w-full lg:w-1/4 flex flex-col">
           <SkillTextArea
             title="Frontend"
             icon={<CodeSvg />}

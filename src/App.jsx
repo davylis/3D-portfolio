@@ -23,7 +23,7 @@ function App() {
             <Navbar />
             <Hero />
           </div>
-          <div className="relative z-0 w-full bg-primary bg-center min-h-screen">
+          <div className="relative z-0 w-screen bg-primary bg-center min-h-screen">
             <StarsCanvas />
             <About />
             <Experience />

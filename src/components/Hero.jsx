@@ -29,7 +29,7 @@ const Hero = () => {
 
 
   const Video = ({ type = 'video/mp4' }) => (
-     <div className="relative w-full h-screen">
+     <div className="relative w-full h-screen overflow-hidden bg-black">
      <video
   className="
     fixed top-0 left-0 
