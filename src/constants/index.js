@@ -1,10 +1,14 @@
 import {
   sysma,
-  meta,
   hus,
   securitas,
   fit, 
   GD,
+  gym,
+  ippool,
+  portfolio,
+  ptwo,
+  click,
 } from "../assets";
 
 export const navLinks = [
@@ -165,67 +169,146 @@ const experiences = [
 
 const projects = [
   {
-    name: "Project",
+    name: "Comic Book about life",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elits.",
+      "Comic book about life.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+    ],
+     image: ippool,
+    source_code_link: "https://github.com/davylis",
+  },
+  {
+    name: "Portfolio website for work hunting",
+    description:
+      "Portfolio you're visiting right now, enjoy! Used some 3D Models and more cool features.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
-        color: "green-text-gradient",
+        name: "tailwindcss",
+        color: "violet-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "threejs",
+        color: "yellow-text-gradient",
+      },
+        {
+        name: "js",
         color: "pink-text-gradient",
       },
     ],
-    // image: carrent,
-    source_code_link: "https://github.com/",
+     image: ptwo,
+    source_code_link: "https://github.com/davylis/3D-portfolio",
   },
   {
-    name: "Project",
+    name: "Ticket Sale System",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "The purpose of the project is to produce a ticketing system commissioned by the client. The system will be used at the client’s points of sale, where ticket sellers will sell, print, and verify tickets using a QR code.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "springboot",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "JWTauthentication",
         color: "pink-text-gradient",
       },
+      {
+        name: "postresql",
+        color: "orange-text-gradient",
+      },
     ],
-    // image: jobit,
-    source_code_link: "https://github.com/",
+     image: ippool,
+    source_code_link: "https://github.com/davylis/TicketGuru.",
   },
   {
-    name: "Project",
+    name: "Gym Application",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elits.",
+      "Application is designed to manage customer training schedules, monitor activities, and enhance fitness tracking. This application allows personal trainers to efficiently manage training plans, track customer activities, and maintain a user-friendly interface for all interactions.",
     tags: [
-      {
-        name: "nextjs",
+            {
+        name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "material-ui",
         color: "green-text-gradient",
+      },
+      {
+        name: "dayjs",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "recharts",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "lodash",
+        color: "violet-text-gradient",
+      },
+      {
+        name: "aggrid",
+        color: "yellow-text-gradient",
+      },
+      {
+        name: "bigcalendar",
+        color: "brown-text-gradient",
+      },
+    ],
+     image: gym,
+    source_code_link: "https://github.com/davylis/Personal-Trainer-React-App",
+  },
+  {
+    name: "IP Pool Manager",
+    description:
+      "Application are designed to streamline the management of IP addresses and associated network recources. With this application you can monitor, and maintain IP address pools, track device assigments, and manage related network configurations.",
+    tags: [
+            {
+        name: "springsecurity",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "springboot",
+        color: "green-text-gradient",
+      },
+      {
+        name: "mysql",
+        color: "orange-text-gradient",
+      },
+    ],
+     image: ippool,
+    source_code_link: "https://github.com/davylis/IP-Address-Management-System",
+  },
+    {
+    name: "First Portfolio website",
+    description:
+      "My very first portfolio website. :3",
+    tags: [
+      {
+        name: "html",
+        color: "blue-text-gradient",
       },
       {
         name: "css",
+        color: "violet-text-gradient",
+      },
+      {
+        name: "js",
         color: "pink-text-gradient",
       },
     ],
-    // image: tripguide,
-    source_code_link: "https://github.com/",
+     image: portfolio,
+    source_code_link: "https://davylis.github.io/",
   },
 ];
 
