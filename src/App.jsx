@@ -18,12 +18,12 @@ function App() {
         seconds={3}
       />
       <BrowserRouter>
-        <div className="z-0 min-h-screen" >
+        <div className="z-0 min-h-screen w-full" >
           <div className="bg-hero-pattern bg-cover bg-center" >
             <Navbar />
             <Hero />
           </div>
-          <div className="relative z-0 w-screen bg-primary bg-center min-h-screen">
+          <div className="relative z-0 w-full bg-primary bg-center min-h-screen">
             <StarsCanvas />
             <About />
             <Experience />

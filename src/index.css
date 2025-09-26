@@ -219,15 +219,13 @@
 .skills-box{
   width: 100%;
   height: 100vh;
-  
-  mix-blend-mode: lighten;
+
 }
 .skills-model{
   opacity: 0.8;
 }
 .FrontEnd, .BackEnd {
   width: 100%;
-  max-width: 600px; 
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -242,7 +240,7 @@
 
 .BackEnd p{
   line-height: 23px;
-  width: 105%;           
+  width: 100%;           
   text-align: center;   
 }
 .gradient{
@@ -277,7 +275,7 @@
 }
 .slider{
     position: absolute;
-    bottom: 5%;
+    bottom: 0%;
     right: 20%;
     width: 60%;
     height: var(--height);

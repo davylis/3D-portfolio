@@ -21,7 +21,7 @@ const SocratesModel = () => {
         <directionalLight position={[100, 100, 100]} />
         <Suspense fallback={<CanvasLoader />}>
           <Center>
-            <primitive object={model.scene} scale={1.5} position={[0, 1.4, 0]} />
+            <primitive object={model.scene} scale={1.2} position={[0, 1.4, 0]} />
           </Center>
         </Suspense>
         <OrbitControls 

@@ -74,7 +74,7 @@ const Works = () => {
      <>
      {/* Section Title */}
       <motion.div variants={textVariant()}
-      style={{ marginBottom: '60px', marginTop: '100px'}}
+      style={{ marginBottom: '60px', marginTop: '80px'}}
       className='text-center'
       >
         <h2 className={`${styles.sectionHeadText} gradient text-center`}>Projects</h2>

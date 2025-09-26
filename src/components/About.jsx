@@ -56,20 +56,20 @@ Docker for containerization to deploy and run applications in isolated environme
     <>
       <h2
         className={`${styles.sectionHeadText} gradient text-center`}
-        style={{ marginBottom: '60px', marginTop: '200px'}}
+        style={{ marginBottom: '60px', marginTop: '200px' }}
       >
         My Skills
       </h2>
 
       <motion.div
-        className="flex flex-col lg:flex-row items-center justify-between gap-10 w-full"
+        className="flex flex-col lg:flex-row items-center justify-between w-full max-w-[1200px] mx-auto overflow-x-hidden overflow-y-hidden"
         variants={textVariant()}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
       >
         {/* Frontend */}
-        <div className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'>
+        <div className="w-full lg:w-1/4">
           <SkillTextArea
             title="Frontend"
             icon={<CodeSvg />}
@@ -79,13 +79,13 @@ Docker for containerization to deploy and run applications in isolated environme
         </div>
 
         {/* 3D Model */}
-        <div className="xl:flex-1 md:h-[1000px] h-[650px] flex flex-col items-center justify-center">
+        <div className="w-full lg:w-1/2 lg:h-[1000px] h-[650px]">
           <p className={styles.sectionSubText}>Move me!</p>
           <SocratesModel />
         </div>
 
         {/* Backend */}
-        <div className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'>
+        <div className="w-full lg:w-1/4">
           <SkillTextArea
             title="Backend"
             icon={<ServerSvg />}
@@ -93,8 +93,10 @@ Docker for containerization to deploy and run applications in isolated environme
             skillAreaClassName="BackEnd"
           />
         </div>
+
+        {/* Skills Slider */}
         <div
-          className="slider"
+          className="slider w-full"
           reverse="true"
           style={{
             "--width": "100px",
@@ -104,7 +106,11 @@ Docker for containerization to deploy and run applications in isolated environme
         >
           <div className="list">
             {skills.map((skill) => (
-              <div className="item" key={skill.position} style={{ "--position": skill.position }}>
+              <div
+                className="item"
+                key={skill.position}
+                style={{ "--position": skill.position }}
+              >
                 <img src={skill.src} alt="" />
               </div>
             ))}
