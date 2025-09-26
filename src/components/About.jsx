@@ -69,7 +69,7 @@ Docker for containerization to deploy and run applications in isolated environme
         viewport={{ once: true, amount: 0.25 }}
       >
         {/* Frontend */}
-        <div className="w-full lg:w-1/4 flex flex-col">
+        <div className="w-full lg:w-5/8 flex flex-col">
           <SkillTextArea
             title="Frontend"
             icon={<CodeSvg />}
@@ -79,13 +79,13 @@ Docker for containerization to deploy and run applications in isolated environme
         </div>
 
         {/* 3D Model */}
-        <div className="w-full lg:w-1/2 lg:h-[1000px] h-[650px]">
+        <div className="w-full lg:w-3/9 lg:h-[1000px] h-[650px]">
           <p className={styles.sectionSubText}>Move me!</p>
           <SocratesModel />
         </div>
 
         {/* Backend */}
-        <div className="w-full lg:w-1/4">
+        <div className="w-full lg:w-5/8">
           <SkillTextArea
             title="Backend"
             icon={<ServerSvg />}
