@@ -23,6 +23,38 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
+
+    emailjs.send(
+  'service_lekvpz8',
+  'template_fuphrvw', 
+  {
+    from_name: form.name,
+    from_email: form.email,
+    message: form.message,
+  },
+  'GUCqWaiIOcTWzZed6'
+).then(() => {
+  // Auto reply
+  emailjs.send(
+    'service_lekvpz8',
+    'template_7ojnd3k',
+    {
+      from_name: form.name,
+      from_email: form.email,
+      message: form.message,
+    },
+    'GUCqWaiIOcTWzZed6'
+  )
+}).then(() => {
+  setLoading(false);
+  alert("Message sent");
+}).catch((error) => {
+  setLoading(false);
+  console.error(error);
+  alert("Something went wrong.");
+});
+
+
   };
 
   return (
@@ -57,7 +89,7 @@ A
                 name="name"
                 value={form.name}
                 onChange={handleChange}
-                placeholder="What's your good name?"
+                placeholder="What's your name?"
                 className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
               />
             </label>
@@ -68,7 +100,7 @@ A
                 name="email"
                 value={form.email}
                 onChange={handleChange}
-                placeholder="What's your good email?"
+                placeholder="What's your email?"
                 className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
               />
             </label>
