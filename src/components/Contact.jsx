@@ -35,15 +35,17 @@ const Contact = () => {
           </h2>
         </div>
 
-        <div className="xl:mt-12 flex xl:flex-row flex-col gap-6">
+        <div className="xl:mt-12 flex flex-col xl:flex-row gap-6 justify-center items-center w-full max-w-[1200px] mx-auto">
+
+
 <motion.div 
         variants={textVariant()} 
-        className="flex w-full xl:w-1/2 items-center justify-center"
-      > 
+        className="flex-shrink-0 xl:w-6/12 h-[500px] xl:h-[600px] justify-center items-center">
+      
        <p className={styles.sectionSubText} text-center mb-4>Move me!</p>
       <BluePlanet /> 
       </motion.div>
-       <div className="flex w-full xl:w-1/2 items-center justify-center">
+       <div className="flex-shrink-0 xl:w-4/12 items-center justify-center">
           <form ref={formRef}
             onSubmit={handleSubmit}
             className="flex-1 flex flex-col gap-8 max-w-lg w-full"
