@@ -6,30 +6,33 @@ import { nodejs, spring, sqlite, css, aws, c, git, html, java, js, linux, mysql,
 import SectionWrapper from '../hoc/SectionWrapper'
 import { styles } from "../styles";
 
-// Main Component
 const About = () => {
-  // text body for skills text area
-  const templateText1 = `I see the important role of Frontend development in shaping user experiences and 
-  creating visually appealing interfaces. After all, these services are meant for people to use.
-  Crafting a standout website leaves a lasting impression on users and helps keep them engaged 
-  so they can fully take in what is the message of the website. I mostly use the React framework and code with HTML 
-  and JavaScript to build websites. For styling, I work with CSS and am honing my skills further
-  with TailwindCSS to make things look modern and responsive. I pay attention to responsive design, so sites work 
-  well on all devices and of providing descriptive text for images to make website accessible to people with disabilities. 
-  I also use Git for version control to control changes, experiment and collaborate with others. I use Linux(Zorin) too, which
-  lets me really take full control of my computer.`;
 
-  const templateText2 = `With Backend building, I design, build, and maintain the server-side parts of web applications. 
-I use Spring Boot as a framework for server-side scripting and managing
-the server environment and I mostly code in Java, with some Python as well. I am familiar with database 
-systems and query languages  and I can work with relational databases(like MySQL) as well as non-relational
-databases(like MongoDB) to manage data effectively. I write APIs that let the frontend and backend communicate 
-smoothly, making data exchange easy. I am also very interesten in cybersecurity, icluding various methods of
-securing data applications, network security, encryption, identity and access management(IAM) and risk management. 
-By using middleware effectively, I can make applications more secure and improve overall performance. When 
-it comes to cloud platforms, I have experience with AWS, though nowadays we run our own home server. I manage 
-dependencies, building, and packaging Java/Spring Boot applications with Gradle and Maven. Additionally, I use 
-Docker for containerization to deploy and run applications in isolated environments. )`;
+  const frontend = [
+    "HTML - Markup Language",
+    "CSS - Styling language",
+    "JavaScript - Programming Language",
+    "React - JavaScript Library",
+    "TailwindCSS - CSS Framework",
+    "Git - Version Control System"
+  ];
+  const backend = [
+    "Java - Programmng Language",
+    "Python - Programming Language",
+    "C++ - Programming Language",
+    "Node.js - JavaScript Runtime",
+    "Spring Boot - Java Framework",
+    "MySQL - Relational Database",
+    "PostreSql - Database",
+    "SQLite - Lightweight Database",
+    "Postman - API Testing Tool"
+  ];
+  const devops = [
+    "AWS - Cloud Platform",
+    "Azure - Cloud PLatform",
+    "Docker -  Containerization",
+    "Linux - Operating System"];
+
 
   // Array of skills icons and their positions
   const skills = [
@@ -69,29 +72,53 @@ Docker for containerization to deploy and run applications in isolated environme
         viewport={{ once: true, amount: 0.25 }}
       >
         {/* Frontend */}
-        <div className="w-full lg:w-5/8 flex flex-col">
+        <div className="w-full lg:w-5/8 flex flex-col text-center">
           <SkillTextArea
             title="Frontend"
             icon={<CodeSvg />}
-            body={templateText1}
+            body={"Tools I use for building a website UI"}
             skillAreaClassName="FrontEnd"
           />
+          <ul className="list-none pl-6 space-y-1">
+            {frontend.map((tool, index) => (
+              <li key={index}>{tool}</li>
+            ))}
+          </ul>
+
         </div>
 
         {/* 3D Model */}
-        <div className="w-full lg:w-3/9 lg:h-[1000px] h-[650px]">
+        <div className="w-full lg:w-3/9 flex flex-col items-center">
+        <div className="lg:h-[1000px] h-[650px]">
           <p className={styles.sectionSubText}>Move me!</p>
           <SocratesModel />
         </div>
 
+         {/* Devops */}
+        <div className="mt-6 text-center">
+          <p className="mt-6">Tools for Devops</p>
+          <ul className="list-none pl-6 space-y-1">
+            {devops.map((tool, index) => (
+              <li key={index}>{tool}</li>
+            ))}
+          </ul>
+        </div>
+         </div>
+
         {/* Backend */}
-        <div className="w-full lg:w-5/8">
+        <div className="w-full lg:w-5/8 text-center">
           <SkillTextArea
             title="Backend"
             icon={<ServerSvg />}
-            body={templateText2}
+            body={"Tools I use for API's, databases and servers"}
             skillAreaClassName="BackEnd"
           />
+          <ul className="list-none pl-6 space-y-1">
+            {backend.map((tool, index) => (
+              <li key={index}>{tool}</li>
+            ))}
+          </ul>
+
         </div>
 
         {/* Skills Slider */}

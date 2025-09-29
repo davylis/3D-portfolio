@@ -68,8 +68,7 @@ const Contact = () => {
         </div>
 
         <div className="xl:mt-12 flex flex-col xl:flex-row gap-6 justify-center items-center w-full max-w-[1200px] mx-auto">
-A
-
+          
 <motion.div 
         variants={textVariant()} 
         className="flex-shrink-0 xl:w-6/12 h-[500px] xl:h-[600px] justify-center items-center">
