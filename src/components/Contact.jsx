@@ -162,6 +162,7 @@ const Contact = () => {
 
       </motion.div>
 
+<div className="w-full py-4 text-center text-sm text-gray-400 mt-12"> © {new Date().getFullYear()} Liisa Davydov </div>
       
     </>
   );
