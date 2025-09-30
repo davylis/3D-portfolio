@@ -5,6 +5,9 @@ import { styles } from '../styles';
 import emailjs from '@emailjs/browser';
 import SectionWrapper from '../hoc/SectionWrapper'
 import BluePlanet from './canvas/BluePlanet';
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaFilePdf } from "react-icons/fa";
 
 const Contact = () => {
   const formRef = useRef();
@@ -113,6 +116,7 @@ const Contact = () => {
                 className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
               />
             </label>
+            <div className="flex justify-center">
             <button
               type="submit"
               className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
@@ -120,9 +124,42 @@ const Contact = () => {
               {loading ? 'Sending...' : 'Send'}
 
             </button>
+            </div>
           </form>
           </div>
         </div>
+      </motion.div>
+
+      <motion.div>
+        <div className="flex justify-center gap-6 mt-16">
+  {/* LinkedIn */}
+  <a
+    href="https://linkedin.com/in/davylis"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-16 h-16 flex items-center justify-center rounded-full bg-tertiary shadow-md shadow-primary hover:scale-110 transition-transform"
+  >
+    <FaLinkedin className='h-9 w-9'/>
+  </a>
+
+  {/* GitHub */}
+  <a
+    href="https://github.com/davylis"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-16 h-16 flex items-center justify-center rounded-full bg-tertiary shadow-md shadow-primary hover:scale-110 transition-transform"
+  >
+    <FaGithub className='h-9 w-9'/>
+  </a>
+  <a
+   href="/cv/my-cv.pdf"
+    download="My_CV.pdf"
+    className="w-16 h-16 flex items-center justify-center rounded-full bg-tertiary shadow-md shadow-primary hover:scale-110 transition-transform"
+  >
+    <FaFilePdf className="w-6 h-6" />
+  </a>
+</div>
+
       </motion.div>
 
       
