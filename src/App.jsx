@@ -8,6 +8,7 @@ import Contact from './components/Contact';
 import StarsCanvas from './components/Stars';
 import Preloader from './components/Preloader';
 import { d_logo } from './assets'
+import Cursor from './components/Cursor';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
       <BrowserRouter>
         <div className="z-0 min-h-screen w-full" >
           <div className="bg-hero-pattern bg-cover bg-center" >
+            <Cursor />
             <Navbar />
             <Hero />
           </div>

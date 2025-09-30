@@ -58,7 +58,7 @@ const About = () => {
 
     <>
       <h2
-        className={`${styles.sectionHeadText} gradient text-center mt-20 sm:mt-32 md:mt-48 mb-16`}
+        className={`${styles.sectionHeadText} gradient text-center mt-10 sm:mt-16 md:mt-20 mb-12`}
       >
         My Skills
       </h2>
@@ -71,7 +71,7 @@ const About = () => {
         viewport={{ once: true, amount: 0.25 }}
       >
         {/* Frontend */}
-        <div className="w-full lg:w-5/12 flex flex-col text-center mt-52">
+        <div className="w-full lg:w-5/12 flex flex-col text-center mt-8 lg:mt-52">
           <SkillTextArea
             title="Frontend"
             icon={<ServerSvg />}
@@ -120,7 +120,7 @@ const About = () => {
         </div>
 
         {/* Backend */}
-        <div className="w-full lg:w-5/12 text-center mt-48">
+        <div className="w-full lg:w-5/12 text-center mt-8 lg:mt-48">
           <SkillTextArea
             title="Backend"
             icon={<CodeSvg />}
