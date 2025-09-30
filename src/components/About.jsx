@@ -58,8 +58,7 @@ const About = () => {
 
     <>
       <h2
-        className={`${styles.sectionHeadText} gradient text-center`}
-        style={{ marginBottom: '60px', marginTop: '200px' }}
+        className={`${styles.sectionHeadText} gradient text-center mt-20 sm:mt-32 md:mt-48 mb-16`}
       >
         My Skills
       </h2>
@@ -72,7 +71,7 @@ const About = () => {
         viewport={{ once: true, amount: 0.25 }}
       >
         {/* Frontend */}
-        <div className="w-full lg:w-5/12 flex flex-col text-center mt-52 ">
+        <div className="w-full lg:w-5/12 flex flex-col text-center mt-52">
           <SkillTextArea
             title="Frontend"
             icon={<ServerSvg />}
@@ -176,10 +175,10 @@ const SkillTextArea = (props) => {
   const { title, icon, body, skillAreaClassName } = props;
   return (
     <div className={skillAreaClassName}>
-      <div className="title-container">
-        <h1 className="gradient">{title}</h1>
+      <div className="flex items-center justify-center gap-2">
+        <h1 className="gradient text-2xl sm:text-3xl md:text-3xl lg:text-4xl">{title}</h1>
         <div className="icon">{icon}</div>
-      </div>
+</div>
       <p>{body}</p>
     </div>
   )

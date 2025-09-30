@@ -15,7 +15,7 @@ const Hero = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 768) {
-        setVideoSrc(Liisa_IntroM);
+        setVideoSrc(Liisa_Intro);
       } else {
         setVideoSrc(Liisa_Intro);
       }

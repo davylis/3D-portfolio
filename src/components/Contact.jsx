@@ -71,9 +71,9 @@ const Contact = () => {
           
 <motion.div 
         variants={textVariant()} 
-        className="flex-shrink-0 xl:w-6/12 h-[500px] xl:h-[600px] justify-center items-center">
+        className="flex-shrink-0 xl:w-6/12 h-[400px] xl:h-[600px] justify-center items-center">
       
-       <p className={styles.sectionSubText} text-center mb-4>Move me!</p>
+       <p className={`${styles.sectionSubText} hidden sm:block text-center mb-4`}>Move me!</p>
       <BluePlanet /> 
       </motion.div>
        <div className="flex-shrink-0 xl:w-4/12 items-center justify-center">
