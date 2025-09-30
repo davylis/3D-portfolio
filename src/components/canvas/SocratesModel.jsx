@@ -16,12 +16,16 @@ const SocratesModel = () => {
   const model = useGLTF('/rhetorician/scene.gltf');
   return (
     <>
-      <Canvas frameloop="demand" camera={{ position: [-6, 7, 10], fov: 45, near: 0.9, far: 200 }}>
+      <Canvas 
+        frameloop="demand" 
+        camera={{ position: [-6, 7, 10], fov: 45, near: 0.9, far: 200 }}
+        style={{ width: "100%", height: "1000px" }}
+        >
         <ambientLight intensity={1.5} />
         <directionalLight position={[100, 100, 100]} />
         <Suspense fallback={<CanvasLoader />}>
           <Center>
-            <primitive object={model.scene} scale={1.2} position={[0, 1.4, 0]} />
+            <primitive object={model.scene} scale={1.5} position={[0, 1.4, 0]} />
           </Center>
         </Suspense>
         <OrbitControls 
