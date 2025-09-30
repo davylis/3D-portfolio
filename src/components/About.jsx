@@ -57,8 +57,16 @@ const About = () => {
   return (
 
     <>
+      <div className="max-w-3xl mx-auto p-6 bg-gray-900/80 border border-gray-700 rounded-xl shadow-lg text-white text-center space-y-4 mt-20">
+      <p>
+        I'm a 25-year old woman on an exciting journey in the world of technology. Currently, I'm deeply engrossed in my studies, pursuing a BBA in Information Technology, where I'm honing my skills to become a Developer.
+      </p>
+      <p>
+        What drives me is my motivation to develop my skills to the next level. Join me as I navigate this dynamic field, always striving for excellence and reaching for the stars.
+      </p>
+    </div>
       <h2
-        className={`${styles.sectionHeadText} gradient text-center mt-10 sm:mt-16 md:mt-20 mb-12`}
+        className={`${styles.sectionHeadText} gradient text-center mt-10 sm:mt-16 md:mt-40 mb-12`}
       >
         My Skills
       </h2>
@@ -71,7 +79,7 @@ const About = () => {
         viewport={{ once: true, amount: 0.25 }}
       >
         {/* Frontend */}
-        <div className="w-full lg:w-5/12 flex flex-col text-center mt-8 lg:mt-52">
+        <div className="w-full lg:w-5/12 flex flex-col text-center lg:mt-52">
           <SkillTextArea
             title="Frontend"
             icon={<ServerSvg />}
@@ -120,7 +128,7 @@ const About = () => {
         </div>
 
         {/* Backend */}
-        <div className="w-full lg:w-5/12 text-center mt-8 lg:mt-48">
+        <div className="w-full lg:w-5/12 text-center mt-10 lg:mt-48">
           <SkillTextArea
             title="Backend"
             icon={<CodeSvg />}

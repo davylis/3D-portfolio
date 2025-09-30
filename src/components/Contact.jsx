@@ -152,8 +152,8 @@ const Contact = () => {
     <FaGithub className='h-9 w-9'/>
   </a>
   <a
-   href="/cv/my-cv.pdf"
-    download="My_CV.pdf"
+   href="/assets/CV.pdf"
+    download="CV.pdf"
     className="w-16 h-16 flex items-center justify-center rounded-full bg-tertiary shadow-md shadow-primary hover:scale-110 transition-transform"
   >
     <FaFilePdf className="w-6 h-6" />
