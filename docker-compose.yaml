@@ -4,6 +4,12 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: react-app
-    ports:
-      - "5673:80"
     restart: unless-stopped
+    expose:
+      - "80"
+    networks:
+      - npm_network
+
+networks:
+  npm_network:
+    external: true
