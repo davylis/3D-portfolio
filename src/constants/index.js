@@ -168,19 +168,19 @@ const experiences = [
 ];
 
 const projects = [
-  // {
-  //   name: "Comic Book about life",
-  //   description:
-  //     "Comic book about life.",
-  //   tags: [
-  //     {
-  //       name: "react",
-  //       color: "blue-text-gradient",
-  //     },
-  //   ],
-  //    image: ippool,
-  //   source_code_link: "https://github.com/davylis",
-  // },
+  {
+    name: "Comic Book about life(IN PROGRESS)",
+    description:
+      "Comic book about life.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+    ],
+    //  image: ,
+    source_code_link: "https://github.com/davylis",
+  },
   {
     name: "Portfolio website for work hunting",
     description:

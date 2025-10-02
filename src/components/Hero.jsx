@@ -9,30 +9,19 @@ import { styles } from "../styles";
 
 
 const Hero = () => {
-
   const [videoSrc, setVideoSrc] = useState(Liisa_Intro);
 
+  // Detect mobile and set video source once on mount
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth <= 768) {
-        setVideoSrc(Liisa_Intro);
-      } else {
-        setVideoSrc(Liisa_Intro);
-      }
-    };
-
-     handleResize();
-
-     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    const isMobile = window.innerWidth <= 768;
+    setVideoSrc(isMobile ? Liisa_IntroM : Liisa_Intro);
   }, []);
-
 
   const Video = ({ type = 'video/mp4' }) => (
      <div className="relative w-full h-screen overflow-hidden bg-black">
      <video
   className="
-    fixed top-0 left-0 
+    top-0 left-0 
     w-full h-full 
     object-cover 
     z-0 

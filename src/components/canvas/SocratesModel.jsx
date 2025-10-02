@@ -29,7 +29,11 @@ const SocratesModel = () => {
     <Canvas
       frameloop="demand"
       camera={{ position: [-6, 7, 10], fov: 45, near: 0.9, far: 200 }}
-      style={{ width: "100%", height: "100%" }}
+      style={{ 
+        width: "100%", 
+        height: "100%",
+        pointerEvents: isMobile ? "none" : "auto",
+       }}
     >
       <ambientLight intensity={1.5} />
       <directionalLight position={[100, 100, 100]} />

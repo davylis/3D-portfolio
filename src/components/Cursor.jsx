@@ -3,12 +3,26 @@ import { motion } from "framer-motion";
 
 export default function Cursor() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [isMobile, setIsMobile] = useState(false);
 
+  // Detect mobile
   useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    handleResize(); // check on mount
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Track mouse movement
+  useEffect(() => {
+    if (isMobile) return; // skip event listener on mobile
     const move = (e) => setMousePos({ x: e.clientX, y: e.clientY });
     window.addEventListener("mousemove", move);
     return () => window.removeEventListener("mousemove", move);
-  }, []);
+  }, [isMobile]);
+
+  // Hide on mobile
+  if (isMobile) return null;
 
   return (
     <motion.div
