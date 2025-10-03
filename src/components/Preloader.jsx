@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Preloader = (props) => {
     const { element, seconds } = props;
-    const milliseconds = seconds * 200
+    const milliseconds = seconds * 1000
     const [isVisible, setIsVisible] = useState(true);
 
     useEffect(() => {
@@ -19,7 +19,7 @@ const Preloader = (props) => {
             {isVisible && (
                 <div className="preloaderBg" id="preloader">
                     <div className="preloader-container">
-                        <div class="preloader-logo">
+                        <div className="preloader-logo">
                             {element}
                         </div>
                         <div class="preloader-spinner"></div>

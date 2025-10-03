@@ -1,10 +1,6 @@
 import { useEffect, useState } from "react";
-import { motion } from 'framer-motion';
-import StarryNight from './canvas/SocratesModel'
-import Liisa_Intro from '../assets/Liisa_Intro_NCC_BQ.mp4'
+import Liisa_Intro from '../assets/Liisa_Intro_NCC_MQ.mp4'
 import Liisa_IntroM from '../assets/Liisa_Intro_NCC_MQ.mp4'
-import ReactPlayer from 'react-player';
-import { styles } from "../styles";
 
 
 

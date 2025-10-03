@@ -5,9 +5,12 @@ import { textVariant } from '../utils/motion';
 import { nodejs, spring, sqlite, css, aws, c, git, html, java, js, linux, mysql, postman, python, react, tailwind } from "../assets/tech";
 import SectionWrapper from '../hoc/SectionWrapper'
 import { styles } from "../styles";
+import LazyLoadImage from "./LazyLoadImage";
+import { usePerformance } from "./PerformanceChecker";
 
 const About = () => {
 
+  const isHighPerformance = usePerformance() 
   const frontend = [
     "HTML - Markup Language",
     "CSS - Styling language",
@@ -168,7 +171,7 @@ const About = () => {
                 key={skill.position}
                 style={{ "--position": skill.position }}
               >
-                <img src={skill.src} alt="" />
+                <LazyLoadImage src={skill.src} alt="" />
               </div>
             ))}
           </div>
