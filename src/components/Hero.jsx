@@ -1,22 +1,18 @@
-import { useEffect, useState } from "react";
-import Liisa_Intro from '../assets/Liisa_Intro_NCC_MQ.mp4'
+import Liisa_Intro from '../assets/Liisa_Intro_NCC_BQ.mp4'
 import Liisa_IntroM from '../assets/Liisa_Intro_NCC_MQ.mp4'
+import { usePerformance } from "./PerformanceChecker";
 
 
 
 const Hero = () => {
-  const [videoSrc, setVideoSrc] = useState(Liisa_Intro);
+  const isHighPerformance = usePerformance();
+  const videoSrc = isHighPerformance ? Liisa_Intro : Liisa_IntroM;
 
-  // Detect mobile and set video source once on mount
-  useEffect(() => {
-    const isMobile = window.innerWidth <= 768;
-    setVideoSrc(isMobile ? Liisa_IntroM : Liisa_Intro);
-  }, []);
 
   const Video = ({ type = 'video/mp4' }) => (
-     <div className="relative w-full h-screen overflow-hidden bg-black">
-     <video
-  className="
+    <div className="relative w-full h-screen overflow-hidden bg-black">
+      <video
+        className="
     top-0 left-0 
     w-full h-full 
     object-cover 
@@ -24,16 +20,16 @@ const Hero = () => {
     md:w-full md:h-full 
     sm:w-auto sm:h-full
   "
-  autoPlay
-  loop
-  muted
-  playsInline
->
-  <source src={videoSrc} type={type} />
-  Your browser does not support the video tag.
-</video>
+        autoPlay
+        loop
+        muted
+        playsInline
+      >
+        <source src={videoSrc} type={type} />
+        Your browser does not support the video tag.
+      </video>
 
-        {/* <div className="absolute bottom-20 left-20 z-10">
+      {/* <div className="absolute bottom-20 left-20 z-10">
         <h1 className={`${styles.sectionSubText}  text-2xl md:text-xl`}>Let me help you with technical solutions</h1>
       </div> */}
     </div>
@@ -41,9 +37,7 @@ const Hero = () => {
 
   return (
     <div className="flex justify-center items-center h-screen w-screen">
-      <Video
-        path={Liisa_Intro}   // use imported file
-      />
+      <Video/>
     </div>
   );
 };

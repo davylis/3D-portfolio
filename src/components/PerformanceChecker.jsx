@@ -7,18 +7,17 @@ export const PerformanceProvider = ({ children }) => {
 
     useEffect(() => {
         const checkPerformance = () => {
-            const memory = performance.memory; // Available in most modern browsers
             const cpuCores = navigator.hardwareConcurrency || 1; // Default to 1 if not supported
+            console.log("available CPUcores" + cpuCores);
 
             // Detect mobile devices
             const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
             // Define criteria for high-performance devices
-            const hasSufficientMemory = memory && memory.jsHeapSizeLimit > 50 * 1024 * 1024;
-            const hasSufficientCores = cpuCores > 2;
+            const hasSufficientCores = cpuCores > 4;
 
             // Determine if the device is high performance
-            const deviceIsHighPerformance = hasSufficientMemory && hasSufficientCores;
+            const deviceIsHighPerformance = hasSufficientCores;
 
             setIsHighPerformance(deviceIsHighPerformance || isMobileDevice);
         };
