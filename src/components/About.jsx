@@ -17,12 +17,11 @@ const About = () => {
     "JavaScript - Programming Language",
     "React - JavaScript Library",
     "TailwindCSS - CSS Framework",
-    "Git - Version Control System"
   ];
   const backend = [
     "Java - Programmng Language",
     "Python - Programming Language",
-    "C++ - Programming Language",
+    "C# - Programming Language",
     "Node.js - JavaScript Runtime",
     "Spring Boot - Java Framework",
     "MySQL - Relational Database",
@@ -31,6 +30,7 @@ const About = () => {
     "Postman - API Testing Tool"
   ];
   const devops = [
+     "Git - Version Control System",
     "AWS - Cloud Platform",
     "Azure - Cloud PLatform",
     "Docker -  Containerization",
@@ -62,10 +62,10 @@ const About = () => {
     <>
       <div className="max-w-3xl mx-auto p-6 bg-gray-900/80 border border-gray-700 rounded-xl shadow-lg text-white text-center space-y-4 mt-20">
       <p>
-        I'm a 26-year old developer on an exciting journey in the world of technology. Currently, I'm deeply engrossed in my studies, pursuing a BBA in Information Technology, where I'm honing my skills to become a Developer.
+        I'm a 26-year old developer on an exciting journey in the world of technology. 
       </p>
       <p>
-        What drives me is my motivation to develop my skills to the next level. Join me as I navigate this dynamic field, always striving for excellence and reaching for the stars.
+        What motivates me is developing my skills to the next level and reaching for the stars in the world of technology.
       </p>
     </div>
       <h2
@@ -89,7 +89,7 @@ const About = () => {
             skillAreaClassName="FrontEnd"
           />
            <p className="font-bold mb-3">Tools I use for building a website UI</p>
-            <ul className="list-none pl-0 space-y-2">
+            <ul className="list-none pl-0 space-y-2 mb-6">
               {frontend.map((tool, index) => {
                 const [name, description] = tool.split(" - ");
                 return (
@@ -104,13 +104,13 @@ const About = () => {
 
         {/* 3D Model */}
         <div className="w-full lg:w-4/12 flex flex-col items-center">
-          <div className="w-full h-[700px] lg:h-[700px] flex flex-col items-center justify-center">
+          <div className="hidden sm:flex w-full h-[700px] lg:h-[700px] flex flex-col items-center justify-center">
             <p className={`${styles.sectionSubText} hidden sm:block`}>Move me!</p>
             <SocratesModel />
           </div>
 
           {/* Operations */}
-          <div className="w-full text-center">
+          <div className="w-full text-center ">
             <SkillTextArea
               title="Operations"
               icon={<InfinitySvg />}

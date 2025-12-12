@@ -5,9 +5,9 @@ import App from './App.jsx'
 import { PerformanceProvider } from './components/PerformanceChecker.jsx';
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  // <StrictMode>
     <PerformanceProvider>
       <App />
     </PerformanceProvider>
-  </StrictMode>,
+  // </StrictMode>,
 )

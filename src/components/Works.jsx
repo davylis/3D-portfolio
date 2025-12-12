@@ -29,7 +29,7 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
+        className='bg-tertiary p-5 rounded-2xl w-full max-w-[360px]'
       >
         <div className="project-card relative">
           <img
@@ -78,7 +78,14 @@ const Works = () => {
         >
           Following projects showcases my skills and experience through
           real-world examples of my work. Each project have a
-          links to code repositories.
+          link.
+          <br />
+          <br />
+          <p>For logins:
+            <br />
+          Username:demouser
+          <br />
+          Password:demouser123</p>
         </motion.p>
       </div>
 

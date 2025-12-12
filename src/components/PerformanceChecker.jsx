@@ -14,7 +14,7 @@ export const PerformanceProvider = ({ children }) => {
             const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
             // Define criteria for high-performance devices
-            const hasSufficientCores = cpuCores > 4;
+            const hasSufficientCores = cpuCores > 5;
 
             // Determine if the device is high performance
             const deviceIsHighPerformance = hasSufficientCores;

@@ -8,7 +8,10 @@ import {
   ippool,
   portfolio,
   ptwo,
-  click,
+  ticket,
+  anonymous,
+  gaming,
+  altzone,
 } from "../assets";
 
 export const navLinks = [
@@ -105,6 +108,21 @@ const technologies = [
 ];
 
 const experiences = [
+    {
+    title: "Software Developer Trainee",
+    company_name: "Psyche's Royale Gaming ry",
+    icon: gaming,
+    iconBg: "#0a313dff",
+    date: "December 2025 - Present",
+    points: [
+      "ALT Zone is a mobile game being developed as a tool for teaching game art in middle schools and high schools.",
+      "The development of the game is based on collaboration between professionals and students and on the dream of creating a game that offers something for every type of player.",
+      "Game engine programming (Unity, C#)",
+      "Web application development",
+      "Database and backend design",
+      "Participation in team meetings and cross-department collaboration",
+    ],
+  },
   {
     title: "Dance Teacher",
     company_name: "SyVo ry",
@@ -169,17 +187,46 @@ const experiences = [
 
 const projects = [
   {
-    name: "Comic Book about life(IN PROGRESS)",
+    name: "ALT Zone mobile game",
     description:
-      "Comic book about life.",
+      "Developing as a tool for teaching game art in middle schools and high schools.",
     tags: [
       {
-        name: "react",
+        name: "C#",
+        color: "green-text-gradient",
+      },
+      {
+        name: "unity",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "backend",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "frontend",
         color: "blue-text-gradient",
       },
     ],
-    //  image: ,
-    source_code_link: "https://github.com/davylis",
+    image: altzone,
+    source_code_link: "https://github.com/Alt-Org/Altzone?tab=readme-ov-file",
+  },
+  {
+    name: "Cybersecurity Risks Game(IN PROCESS)",
+    description:
+      "Developing a Gamified Cybersecurity Training Prototype",
+    tags: [
+      {
+        name: "C#",
+        color: "green-text-gradient",
+      },
+      {
+        name: "unity",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: anonymous,
+    source_code_link: "https://github.com/davylis/CyberSeurityRiskGame",
   },
   {
     name: "Portfolio website for work hunting",
@@ -228,7 +275,7 @@ const projects = [
         color: "orange-text-gradient",
       },
     ],
-     image: ippool,
+     image: ticket,
     source_code_link: "https://github.com/davylis/TicketGuru.",
   },
   {
@@ -308,7 +355,7 @@ const projects = [
       },
     ],
      image: portfolio,
-    source_code_link: "https://davylis.github.io/",
+    source_code_link: "https://github.com/davylis/davylis.github.io",
   },
 ];
 
