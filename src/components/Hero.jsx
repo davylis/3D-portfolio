@@ -1,75 +1,39 @@
-import Liisa_Intro from '../assets/Liisa_Intro_NCC_BQ.mp4'
-import Liisa_IntroM from '../assets/Liisa_Intro_NCC_MQ.mp4'
-import { usePerformance } from "./PerformanceChecker";
-
-
+import kosmo from "../assets/kosmo.png";
+import { styles } from "../styles";
+import SectionWrapper from '../hoc/SectionWrapper'
 
 const Hero = () => {
-  const isHighPerformance = usePerformance();
-  const videoSrc = isHighPerformance ? Liisa_Intro : Liisa_IntroM;
-
-  // const YouTubeVideo = ({ videoId }) => (
-  //   <div className="relative w-full h-screen overflow-hidden bg-black">
-  //     <iframe
-  //       className="
-  //       absolute top-0 left-0
-  //       w-full h-full
-  //       object-cover
-  //       z-0
-  //       md:w-full md:h-full
-  //       sm:w-auto sm:h-full
-  //     "
-  //       src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&modestbranding=1&playlist=${videoId}`}
-  //       frameBorder="0"
-  //       allow="autoplay; fullscreen; picture-in-picture"
-  //       allowFullScreen
-  //       title="YouTube Background Video"
-  //     ></iframe>
-
-  //     {/* Optional overlay content */}
-      
-  //   {/* <div className="absolute bottom-20 left-20 z-10">
-  //     <h1 className={`${styles.sectionSubText} text-2xl md:text-xl`}>
-  //       Let me help you with technical solutions
-  //     </h1>
-  //   </div> */}
-   
-  //   </div>
-  // );
-
-
-  const Video = ({ type = 'video/mp4' }) => (
-    <div className="relative w-full h-screen overflow-hidden bg-black">
-      <video
-        className="
-    top-0 left-0 
-    w-full h-full 
-    object-cover 
-    z-0 
-    md:w-full md:h-full 
-    sm:w-auto sm:h-full
-  "
-        autoPlay
-        loop
-        muted
-        playsInline
-      >
-        <source src={videoSrc} type={type} />
-        Your browser does not support the video tag.
-      </video>
-
-      {/* <div className="absolute bottom-20 left-20 z-10">
-        <h1 className={`${styles.sectionSubText}  text-2xl md:text-xl`}>Let me help you with technical solutions</h1>
-      </div> */}
-    </div>
-  );
+  const heroimg = kosmo;
 
   return (
-    <div className="flex justify-center items-center h-screen w-screen">
-      <Video />
-      {/* <YouTubeVideo videoId={"R3GfuzLMPkA"}/> */}
-    </div>
+    <section className="flex items-start overflow-hidden pb-0">
+      <div className="w-full px-6 md:px-12 pt-[70px]">
+        <div className="flex flex-col md:flex-row items-center gap-4">
+          {/* Left side text */}
+          <div className="flex-1 translate-x-20 -translate-y-40">
+            <h1 className={`${styles.sectionHeadText} text-center mt-10 sm:mt-16 md:mt-35 mb-12`}>What motivates me is developing my skills to the next level and{" "}
+              <span className={`${styles.sectionHeadText} gradient text-center mt-10 sm:mt-16 md:mt-35 mb-12`}>reaching for the stars</span>
+               {" "}in the world of technology</h1>
+            {/* <h1>I'm a 26-year old developer on an exciting journey in the world of
+              technology.</h1>
+            <p>What motivates me is developing my skills to the next level and
+              reaching for the stars in the world of technology.E</p> */}
+          </div>
+
+          {/* Right side image */}
+          <div className="flex-1 flex justify-center md:justify-end translate-x-24">
+            <img
+              src={heroimg}
+              alt="Hero img"
+              className="w-[500px] md:w-[700px] lg:w-[1700px] max-w-none h-auto object-contain [mask-image:radial-gradient(ellipse_at_center,black_50%,transparent_70%)]
+    [-webkit-mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_95%)]"
+              fetchPriority="high"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
-export default Hero;
+export default SectionWrapper(Hero, "hero");

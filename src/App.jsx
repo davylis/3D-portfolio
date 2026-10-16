@@ -23,19 +23,20 @@ function App() {
         seconds={2}
       />
       <BrowserRouter>
-        <div className="z-0 min-h-screen w-full">
-          <div className="bg-hero-pattern bg-cover bg-center">
-            {isHighPerformance && window.innerWidth > 768 && <Cursor />}
-            <Navbar />
-            <Hero />
-          </div>
-          <div className="relative z-0 w-screen bg-primary bg-center min-h-screen">
+                <div className="relative z-0 w-screen bg-primary bg-center min-h-screen">
             {isHighPerformance && (
               <Suspense fallback={<p>Loading Stars...</p>}>
                  <div className="absolute inset-0"></div>
                 <StarsCanvas />
               </Suspense>
             )}
+        <div className="z-0 min-h-screen w-full">
+          <div className="bg-hero-pattern bg-cover bg-center">
+            {isHighPerformance && window.innerWidth > 768 && <Cursor />}
+            <Navbar />
+            <Hero />
+          </div>
+
             <Suspense fallback={<p>Loading About...</p>}>
               <About />
             </Suspense>
