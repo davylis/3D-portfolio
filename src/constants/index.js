@@ -12,6 +12,7 @@ import {
   anonymous,
   gaming,
   altzone,
+  nebula,
 } from "../assets";
 
 export const navLinks = [
@@ -109,7 +110,7 @@ const technologies = [
 
 const experiences = [
     {
-    title: "Software Developer Trainee",
+    title: "Software Developer",
     company_name: "Psyche's Royale Gaming ry",
     icon: gaming,
     iconBg: "#0a313dff",
@@ -128,7 +129,7 @@ const experiences = [
     company_name: "SyVo ry",
     icon: sysma,
     iconBg: "#BE1B82",
-    date: "August 2025 - Present",
+    date: "August 2025 - August 2026",
     points: [
       "Teaching commercial dance classes.",
       "Creating smooth choreographies with popular music.",
@@ -187,9 +188,34 @@ const experiences = [
 
 const projects = [
   {
+    name: "CosmicShop – Space themed online store(IN PROGRESS)",
+    description:
+      "E-commerce web application where users can browse and purchase astronomy-related products.",
+    tags: [
+      {
+        name: "next.js#",
+        color: "green-text-gradient",
+      },
+      {
+        name: "nestJS",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "node.js",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "postreSQL",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: nebula,
+    source_code_link: "https://altzone.fi/fi",
+  },
+  {
     name: "ALT Zone mobile game",
     description:
-      "Developing as a tool for teaching game art in middle schools and high schools.",
+      "Game engine programming and web application develpment.",
     tags: [
       {
         name: "C#",
@@ -209,12 +235,12 @@ const projects = [
       },
     ],
     image: altzone,
-    source_code_link: "https://github.com/Alt-Org/Altzone?tab=readme-ov-file",
+    source_code_link: "https://altzone.fi/fi",
   },
   {
-    name: "Cybersecurity Risks Game(IN PROCESS)",
+    name: "Cybersecurity Risks Game",
     description:
-      "Developing a Gamified Cybersecurity Training Prototype",
+      "Gamified Cybersecurity Research and Data Collection",
     tags: [
       {
         name: "C#",
@@ -229,7 +255,7 @@ const projects = [
     source_code_link: "https://github.com/davylis/CyberSeurityRiskGame",
   },
   {
-    name: "Portfolio website for work hunting",
+    name: "Portfolio website",
     description:
       "Portfolio you're visiting right now, enjoy! Used some 3D Models and more cool features.",
     tags: [
@@ -281,7 +307,7 @@ const projects = [
   {
     name: "Gym Application",
     description:
-      "Application is designed to manage customer training schedules, monitor activities, and enhance fitness tracking. This application allows personal trainers to efficiently manage training plans, track customer activities, and maintain a user-friendly interface for all interactions.",
+      "Application designed to manage customer training schedules, monitor activities, and enhance fitness tracking. This application allows personal trainers to efficiently manage training plans, track customer activities, and maintain a user-friendly interface for all interactions.",
     tags: [
             {
         name: "react",
@@ -318,7 +344,7 @@ const projects = [
   {
     name: "IP Pool Manager",
     description:
-      "Application are designed to streamline the management of IP addresses and associated network recources. With this application you can monitor, and maintain IP address pools, track device assigments, and manage related network configurations.",
+      "Application designed to streamline the management of IP addresses and associated network recources. With this application you can monitor, and maintain IP address pools, track device assigments, and manage related network configurations.",
     tags: [
             {
         name: "springsecurity",

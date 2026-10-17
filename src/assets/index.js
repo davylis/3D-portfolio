@@ -18,6 +18,7 @@ import click from './projects/click.png'
 import ticket from './projects/ticketsystem.png'
 import anonymous from './projects/anonymous.png'
 import altzone from './projects/altzone.png'
+import nebula from './projects/nebula.jpg'
 
 export {
   d_logo,
@@ -40,4 +41,5 @@ export {
   anonymous,
   gaming,
   altzone,
+  nebula,
 };
