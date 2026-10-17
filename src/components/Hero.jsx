@@ -10,18 +10,19 @@ const Hero = () => {
       <div className="w-full px-6 md:px-12 pt-[70px]">
         <div className="flex flex-col md:flex-row items-center gap-4">
           {/* Left side text */}
-          <div className="flex-1 translate-x-20 -translate-y-40">
+          <div className="mt-[150px] w-full md:w-[35%] shrink-0 translate-x-0 -translate-y-40">
             <h1 className={`${styles.sectionHeadText} text-center mt-10 sm:mt-16 md:mt-35 mb-12`}>What motivates me is developing my skills to the next level and{" "}
               <span className={`${styles.sectionHeadText} gradient text-center mt-10 sm:mt-16 md:mt-35 mb-12`}>reaching for the stars</span>
                {" "}in the world of technology</h1>
-            {/* <h1>I'm a 26-year old developer on an exciting journey in the world of
-              technology.</h1>
+               <p className='mt-[150px] text-center text-white text-[24px]'> I'm a 27-year-old web developer on an exciting journey.</p>
+             <p className="mt-[50px] w-full max-w-7xl mx-auto text-center text-white text-[24px]"> Designing and developing modern web applications that are clean, scalable, and impactful.</p>
+            {/* <h1></h1>
             <p>What motivates me is developing my skills to the next level and
               reaching for the stars in the world of technology.E</p> */}
           </div>
 
           {/* Right side image */}
-          <div className="flex-1 flex justify-center md:justify-end translate-x-24">
+          <div className="flex-1 flex justify-center md:justify-end translate-x-35">
             <img
               src={heroimg}
               alt="Hero img"
